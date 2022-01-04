@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".activities.BookingConfirmActivity">
+
+    <ImageView
+        android:id="@+id/ivBackBooking"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_baseline_chevron_grey_left_24"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+    <TextView
+        android:id="@+id/tvBookName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivBackBooking"
+        android:text="Booking Confirmed"
+        android:textSize="@dimen/twenty_four"
+        android:textColor="@color/dark_grey"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ivBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/confirm_booking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDidYouKnow"
+        app:layout_constraintTop_toBottomOf="@+id/ivBook"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Did you know?"
+        android:textColor="@color/green"
+        android:textSize="@dimen/twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvDidYouKnow"
+        app:layout_constraintBottom_toTopOf="@+id/btnProceed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/sixteen"
+        android:text="Lorem ipsum dolor sit amet, \nconsetetur sadipscing elitir, sed diam \nnanumy eirmod tempor invidunt ut \nlabore et dolore magna aliquyam"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnProceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/round_green_button"
+        android:layout_width="250dp"
+        android:text="Proceed"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

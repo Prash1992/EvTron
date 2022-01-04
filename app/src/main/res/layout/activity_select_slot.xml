@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.SelectSlotActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/slot_background">
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_chevron_left_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivback"
+            android:text="Choose your time slot"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty" />
+
+        <TextView
+            android:id="@+id/tvChargeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivback"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Cake bee"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty" />
+
+        <TextView
+            android:id="@+id/tvChargeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChargeName"
+            android:layout_marginStart="40dp"
+            android:text="7th street, anna nagar"
+
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvChargeDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChargeAddress"
+            android:layout_marginStart="40dp"
+            android:text="Thirumalpur"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_white_button_large_curve">
+
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/vwCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:text="23 Oct 21"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="bold"
+
+                />
+
+            <View
+                android:id="@+id/vwCenter"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vwCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="9:41 AM"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="bold"
+
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llSlotSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlDate"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:weightSum="5">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_slot_green_selection">
+
+                    <TextView
+                        android:id="@+id/tvDefault"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Default"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlOneHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_slot_selection">
+
+                    <TextView
+                        android:id="@+id/tvOneHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="1 \nHour"
+                        android:textColor="@color/elephant_grey"
+                        android:textSize="@dimen/sixteen" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlTwoHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_slot_selection">
+
+                    <TextView
+                        android:id="@+id/tvTwohour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="2 \nHours"
+                        android:textColor="@color/elephant_grey"
+                        android:textSize="@dimen/sixteen" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlThreeHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_slot_selection">
+
+                    <TextView
+                        android:id="@+id/tvThreeHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="3 \nHours"
+                        android:textColor="@color/elephant_grey"
+                        android:textSize="@dimen/sixteen" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlFourHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_slot_selection">
+
+                    <TextView
+                        android:id="@+id/tvFourHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="4 \nHours"
+                        android:textColor="@color/elephant_grey"
+                        android:textSize="@dimen/sixteen" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/llCardStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSlotSelection"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/llStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingEnd="8dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAvailable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/cvAvailable"
+                        android:text="Available"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSelected"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/cvSelected"
+                        android:text="Selected"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvUnAvailable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardBackgroundColor="@color/otp_color"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/cvUnAvailable"
+                        android:text="Unavailable"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvCurrentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCardStatus"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="23 Oct 21"
+            android:textColor="@color/medium_grey"
+            android:textSize="@dimen/twenty" />
+
+        <GridView
+            android:id="@+id/gvCurrentGrid"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_below="@+id/tvCurrentDate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="6"
+            android:verticalSpacing="10dp" />
+
+        <TextView
+            android:id="@+id/tvNextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gvCurrentGrid"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="24 Oct 21"
+            android:textColor="@color/medium_grey"
+            android:textSize="@dimen/twenty" />
+
+        <GridView
+            android:id="@+id/gvNextGrid"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_below="@+id/tvNextDate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:scrollbars="none"
+            android:layout_marginBottom="70dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="6"
+            android:verticalSpacing="10dp" />
+
+        <View
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gvNextGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnestimateprice"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_green_button_square"
+        android:text="Estimate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sixteen" />
+
+</RelativeLayout>

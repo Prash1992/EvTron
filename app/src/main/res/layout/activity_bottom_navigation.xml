@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/rlwholelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<!--<com.ev.evtron.utils.CurvedBottomNavigationView-->
+<!--    android:id="@+id/nav_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="62dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--    android:layout_alignParentBottom="true"-->
+<!--    android:layout_marginStart="8dp"-->
+<!--    android:layout_marginBottom="8dp"-->
+<!--    android:layout_marginEnd="8dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/nav_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:layout_marginEnd="4dp"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:background="@drawable/bottom_navigation_custom"-->
+<!--            app:itemTextColor="@color/bnv_tab_item_foreground"-->
+<!--            app:labelVisibilityMode="unlabeled"-->
+<!--            app:menu="@menu/bottom_nav_menu" />-->
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+<!--        <fragment-->
+<!--            android:id="@+id/nav_host_fragment"-->
+<!--            android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            app:defaultNavHost="true"-->
+<!--            app:navGraph="@navigation/mobile_navigation" />-->
+
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            app:mbn_circleColor="@color/white"
+            app:mbn_backgroundBottomColor="@color/white"
+            app:mbn_countBackgroundColor="@color/colorAccent"
+            app:mbn_countTextColor="@color/white"
+            app:mbn_defaultIconColor="@color/medium_grey"
+            app:mbn_selectedIconColor="@color/green"
+            app:mbn_shadowColor="@color/otp_color"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+        </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

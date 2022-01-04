@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvLocation"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp"
+    android:background="#E6E6E6"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="1dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f8f8">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp" />
+
+
+        <TextView
+            android:id="@+id/tvLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:textColor="#909090"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/tvLocationDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationName"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:textColor="#909090"
+            android:textSize="@dimen/sixteen" />
+
+
+        <TextView
+            android:id="@+id/tvRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationDistrict"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:text="Ratings"
+            android:textColor="#909090"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/ivOneStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationDistrict"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvRatings"
+            android:src="@drawable/ic_baseline_star_border_grey_24" />
+
+        <ImageView
+            android:id="@+id/ivTwoStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationDistrict"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivOneStar"
+            android:src="@drawable/ic_baseline_star_border_grey_24" />
+
+        <ImageView
+            android:id="@+id/ivThreeStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationDistrict"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivTwoStar"
+            android:src="@drawable/ic_baseline_star_border_grey_24" />
+
+        <ImageView
+            android:id="@+id/ivFourStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationDistrict"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivThreeStar"
+            android:src="@drawable/ic_baseline_star_border_grey_24" />
+
+        <ImageView
+            android:id="@+id/ivFiveStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationDistrict"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivFourStar"
+            android:src="@drawable/ic_baseline_star_border_grey_24" />
+
+        <TextView
+            android:id="@+id/tvAvailableslots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRatings"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:text="Open Available Slots: "
+            android:textColor="#909090"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLocationName"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/round_white_button">
+
+            <ImageView
+                android:id="@+id/ivMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/distance_new" />
+
+            <TextView
+                android:id="@+id/tvKm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/ivMap"
+                android:text="96.70 kms"
+                android:textColor="@color/green"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivPlug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivMap"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/plug_icon" />
+
+            <TextView
+                android:id="@+id/tvPlug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvKm"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/ivPlug"
+                android:text="AC/DC"
+                android:textColor="@color/green"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnInstant"
+            android:layout_width="140dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:background="@drawable/round_green_button_square"
+            android:text="INSTANT CHARGE"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/tvDetails"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/btnInstant"
+            android:background="@drawable/round_white_button_square"
+            android:text="Details"
+            android:textColor="@color/green"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

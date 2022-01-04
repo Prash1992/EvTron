@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.FilterActivity">
+
+    <TextView
+        android:id="@+id/tvChargertype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/twenty"
+        android:text="Charger Type"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/twenty"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/llFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvChargertype">
+
+        <RadioGroup
+            android:id="@+id/rgchargertype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rball"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_bg_white"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="All" />
+
+            <RadioButton
+                android:id="@+id/rbac"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:button="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="AC" />
+
+            <RadioButton
+                android:id="@+id/rbdc"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:button="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="DC" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvchargerpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Charger pin"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/twenty"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llFilter" />
+
+    <LinearLayout
+        android:id="@+id/llchargerpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintTop_toBottomOf="@+id/tvchargerpin">
+
+        <RelativeLayout
+            android:id="@+id/rlpin1"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivpin1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pin1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpin2"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivpin2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pin2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpin3"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivpin3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pin3" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlpin4"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivpin4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pin4" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpin5"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivpin5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pin6" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpin6"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivpin6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pin7" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvamenities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Amenities"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/twenty"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llchargerpin" />
+
+    <LinearLayout
+        android:id="@+id/llamenities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintTop_toBottomOf="@+id/tvamenities">
+
+        <RelativeLayout
+            android:id="@+id/rlivbar"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bar_facility" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlplayarea"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/ivplayarea"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/playground" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpool"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/ivpool"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pool" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlrestaurant"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivrestaurant"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/restaurant" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlrooms"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/ivrooms"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/rooms" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlwifi"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/ivwifi"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wifi" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvcapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Capacity"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/twenty"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llamenities" />
+
+    <!--    <org.florescu.android.rangeseekbar.RangeSeekBar-->
+    <!--        android:id="@+id/rangeslider"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvcapacity"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"/>-->
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/rangeslider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:stepSize="1"
+        android:theme="@style/PrimaryButton"
+        android:value="20"
+        android:valueFrom="0"
+        android:valueTo="100"
+        app:haloColor="@color/medium_grey"
+        app:layout_constraintTop_toBottomOf="@+id/tvcapacity"
+        app:thumbColor="@color/dark_grey"
+        app:tickColor="@color/medium_grey"
+        app:trackColor="@color/medium_grey"
+        app:values="@array/rangeSliderValues" />
+
+    <TextView
+        android:id="@+id/tvOnlyAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Only Available"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/twenty"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rangeslider" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swcOnlyAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvOnlyAvailable"
+        app:layout_constraintTop_toBottomOf="@+id/rangeslider"
+        app:track="@drawable/track" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_dark_white_button"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/sixteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_medium_button"
+        android:text="Apply"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sixteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

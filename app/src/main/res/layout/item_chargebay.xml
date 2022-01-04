@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlLocation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rbRadioButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:button="@drawable/radio_button"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:src="@drawable/electric"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvChargerType"
+        android:layout_gravity="center"
+        android:text="AC"
+        android:layout_marginStart="8dp"
+        android:textSize="@dimen/twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvChargerRange"
+        android:layout_gravity="center"
+        android:text="7KW/Hr"
+        android:layout_marginStart="16dp"
+        android:textSize="@dimen/twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:src="@drawable/rupee"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvChargerPrice"
+        android:layout_gravity="center"
+        android:text="140.00/hr"
+        android:layout_marginStart="8dp"
+        android:textSize="@dimen/twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvChargerBays"
+        android:layout_gravity="center"
+        android:text="5"
+        android:layout_marginStart="20dp"
+        android:textSize="@dimen/twenty"
+        android:textColor="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvChargerBay"
+        android:layout_gravity="center"
+        android:text="bays"
+        android:layout_marginStart="8dp"
+        android:textSize="@dimen/sixteen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

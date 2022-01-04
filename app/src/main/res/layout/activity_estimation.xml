@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.EstimationActivity">
+
+    <TextView
+        android:id="@+id/tvbook"
+        android:text="Booking ID"
+        android:textSize="@dimen/primaryTextSize"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBook"
+        app:layout_constraintTop_toBottomOf="@+id/tvbook"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tvBookingId"
+            android:textSize="@dimen/twenty_four"
+            android:layout_gravity="center"
+            android:textColor="@color/dark_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        app:layout_constraintTop_toBottomOf="@+id/cvBook"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:weightSum="2"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:text="Start time"
+                android:textSize="@dimen/primaryTextSize"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/tvStart"
+                android:layout_width="match_parent"
+                android:elevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardUseCompatPadding="true"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    android:textSize="@dimen/twenty_four"
+                    android:gravity="center"
+                    android:textColor="@color/dark_grey"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvend"
+                android:text="End time"
+                android:textSize="@dimen/primaryTextSize"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/tvend"
+                android:layout_width="match_parent"
+                android:elevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardUseCompatPadding="true"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:textSize="@dimen/twenty_four"
+                    android:gravity="center"
+                    android:textColor="@color/dark_grey"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llmiddle"
+        app:layout_constraintTop_toBottomOf="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:weightSum="2"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvunit"
+                android:text="Unit charge"
+                android:textSize="@dimen/primaryTextSize"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/tvunit"
+                android:layout_width="match_parent"
+                android:elevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardUseCompatPadding="true"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/tvunitCharge"
+                    android:textSize="@dimen/twenty_four"
+                    android:gravity="center"
+                    android:textColor="@color/dark_grey"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvhour"
+                android:text="Hourly rate"
+                android:textSize="@dimen/primaryTextSize"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/tvhour"
+                android:layout_width="match_parent"
+                android:elevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardUseCompatPadding="true"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/tvhourlyrate"
+                    android:textSize="@dimen/twenty_four"
+                    android:gravity="center"
+                    android:textColor="@color/dark_grey"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:text="Total time"
+        app:layout_constraintTop_toBottomOf="@+id/llmiddle"
+        android:textSize="@dimen/primaryTextSize"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            android:textSize="@dimen/twenty_four"
+            android:layout_gravity="center"
+            android:textColor="@color/dark_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvAvailable"
+        android:text="Available balance in wallet : 0"
+        app:layout_constraintTop_toBottomOf="@+id/cvTotal"
+        android:textSize="@dimen/sixteen"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSwipe"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailable"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <SeekBar
+            android:id="@+id/sbPush"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:clickable="false"
+            android:paddingStart="70dp"
+            android:paddingEnd="70dp"
+            android:max="100"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/button_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginStart="200dp"
+            android:id="@+id/tvTotalam"
+            android:text="Total Amount"
+            android:textSize="@dimen/primaryTextSize"
+            android:layout_gravity="center"
+            android:textColor="@color/dark_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvTotalamount"
+            android:layout_below="@+id/tvTotalam"
+            android:layout_marginStart="230dp"
+            android:textSize="@dimen/twenty_four"
+            android:layout_gravity="center"
+            android:textColor="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/cvSwipe"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Swipe to pay  >>>"
+        android:textColor="@color/dark_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

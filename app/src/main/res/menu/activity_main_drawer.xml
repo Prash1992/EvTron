@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="@string/menu_map" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_compare_24"
+            android:title="@string/menu_car_comparison" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/car_cog"
+            android:title="@string/menu_breakdown" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="@string/menu_booking" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/information"
+            android:title="@string/menu_about_us" />
+
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/frequently_asked_questions"
+            android:title="@string/menu_faq" />
+
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@drawable/ic_baseline_assignment_24"
+            android:title="@string/menu_terms" />
+
+        <item
+            android:id="@+id/nav_copyrights"
+            android:icon="@drawable/copyright"
+            android:title="@string/menu_copyrights" />
+        <item
+            android:id="@+id/nav_certificates"
+            android:icon="@drawable/certificate"
+            android:title="@string/menu_certificates" />
+    </group>
+</menu>

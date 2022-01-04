@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InstantChargeActivity">
+
+
+
+    <RelativeLayout
+        android:background="@drawable/slot_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_chevron_left_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivback"
+            android:text="Choose your time slot"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty" />
+
+        <TextView
+            android:id="@+id/tvChargeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivback"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Cake bee"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty" />
+
+        <TextView
+            android:id="@+id/tvChargeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChargeName"
+            android:layout_marginStart="40dp"
+            android:text="7th street, anna nagar"
+
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvChargeDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChargeAddress"
+            android:layout_marginStart="40dp"
+            android:text="Thirumalpur"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_white_button_large_curve">
+
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/vwCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:text="23 Oct 21"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="bold"
+
+                />
+
+            <View
+                android:id="@+id/vwCenter"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vwCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="9:41 AM"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="bold"
+
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvStartTime"
+            android:layout_below="@+id/rlDate"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="Start time"
+            android:textSize="@dimen/twenty_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvStartTime"
+            android:background="@color/white"
+            android:layout_below="@+id/tvStartTime"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/tvCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="9:41 AM"
+                android:textSize="@dimen/twenty_four"
+
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvEndTime"
+            android:layout_below="@+id/cvStartTime"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:text="End time"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/twenty_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/rlEndTime"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/seek_minute"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+
+            android:layout_centerInParent="true"
+            app:wheel_max_process="59"
+            app:wheel_pointer_color="@color/white"
+            app:wheel_unreached_color="@color/otp_color"
+            app:wheel_reached_color="@color/green"
+            app:wheel_unreached_width="28dp" />
+
+        <!--     300-32-32 = 236   -->
+<!--        <io.feeeei.circleseekbar.CircleSeekBar-->
+<!--            android:id="@+id/seek_hour"-->
+<!--            android:layout_width="220dp"-->
+<!--            android:layout_height="220dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            app:wheel_pointer_color="@color/white"-->
+<!--            app:wheel_pointer_radius="8dp"-->
+<!--            app:wheel_reached_color="@color/green"-->
+<!--            app:wheel_reached_width="32dp"-->
+<!--            app:wheel_unreached_color="@color/otp_color" />-->
+
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:text="mins"
+                    android:textSize="@dimen/twenty"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:id="@+id/tvMaxTime"
+            android:textSize="@dimen/twenty"
+            android:text="Maximum time available: 60 mins"
+            android:layout_below="@+id/rlEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/tvEstimatedEndTime"
+            android:layout_below="@+id/tvMaxTime"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="Estimated end time"
+            android:textSize="@dimen/twenty_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvEndTimeTime"
+            android:background="@color/white"
+            android:layout_below="@+id/tvEstimatedEndTime"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/tvEstimatedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="9:41 AM"
+                android:layout_gravity="center"
+                android:textSize="@dimen/twenty_four"
+
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <Button
+            android:id="@+id/btnBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/round_green_button_square"
+            android:text="Book"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sixteen" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FAFAFA"
+    tools:context=".fragments.AccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/tvHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="Hello!"
+            android:textSize="@dimen/thirty_two"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_green"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/bottom_profile_selector"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHello" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="110dp"
+            app:cardCornerRadius="20dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHello">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_outline_edit_24" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Prasanth Raja"
+            android:textSize="@dimen/twenty_four"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameAccount">
+
+            <LinearLayout
+                android:id="@+id/llemailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/mail_account" />
+
+                <TextView
+                    android:id="@+id/tvMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:text="prasanthraja0810@gmail.com"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llemailId"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/call_icon" />
+
+                <TextView
+                    android:id="@+id/tvMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:text="+91 9600415670"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llFavourte"
+            app:layout_constraintTop_toBottomOf="@+id/ivImage"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/heart_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".8"
+                android:id="@+id/tvFavorite"
+                android:layout_gravity="center_vertical"
+                android:text="Favorite"
+                android:layout_marginStart="4dp"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llNotification"
+            app:layout_constraintTop_toBottomOf="@+id/llFavourte"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/notification"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".8"
+                android:id="@+id/tvNotifications"
+                android:layout_gravity="center_vertical"
+                android:text="Notifications"
+                android:layout_marginStart="4dp"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llPersonalInfo"
+            app:layout_constraintTop_toBottomOf="@+id/llNotification"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/personal_info"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".8"
+                android:id="@+id/tvPersonalInfo"
+                android:layout_gravity="center_vertical"
+                android:text="Personal Info"
+                android:layout_marginStart="4dp"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llwallet"
+            app:layout_constraintTop_toBottomOf="@+id/llPersonalInfo"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/wallet"
+                android:layout_width="20dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".81"
+                android:id="@+id/tvWallet"
+                android:layout_gravity="center_vertical"
+                android:text="Wallet"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llCarInfo"
+            app:layout_constraintTop_toBottomOf="@+id/llwallet"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/car_info"
+                android:layout_width="20dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".81"
+                android:id="@+id/tvCarInfo"
+                android:layout_gravity="center_vertical"
+                android:text="Car Info"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llTransactions"
+            app:layout_constraintTop_toBottomOf="@+id/llCarInfo"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/transactions"
+                android:layout_width="20dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".81"
+                android:id="@+id/tvTransactions"
+                android:layout_gravity="center_vertical"
+                android:text="Transactions"
+                android:layout_marginStart="2dp"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTerms"
+            app:layout_constraintTop_toBottomOf="@+id/llTransactions"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/terms"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".8"
+                android:id="@+id/tvTerms"
+                android:layout_marginStart="2dp"
+                android:layout_gravity="center_vertical"
+                android:text="Terms &amp; Conditions"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            app:layout_constraintTop_toBottomOf="@+id/llTerms"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/privacy"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".8"
+                android:id="@+id/tvPrivacy"
+                android:layout_gravity="center_vertical"
+                android:text="Privacy policies"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".1"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llLogout"
+            app:layout_constraintTop_toBottomOf="@+id/llPrivacy"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".05"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/logout"
+                android:layout_width="20dp"
+                android:layout_marginStart="4dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_weight=".9"
+                android:id="@+id/tvLogout"
+                android:layout_gravity="center_vertical"
+                android:text="Log Out"
+                android:layout_marginStart="8dp"
+                android:textSize="@dimen/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight=".03"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_width="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="32dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

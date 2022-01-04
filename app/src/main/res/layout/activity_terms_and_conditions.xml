@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ui.TermsAndConditionsActivity">
+
+    <ImageView
+        android:id="@+id/ivBackTerms"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_baseline_chevron_grey_left_24"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:textSize="@dimen/twenty"
+        android:layout_toRightOf="@+id/ivBackTerms"
+        android:text="Privacy Policy &amp; Terms of Service "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <WebView
+        android:id="@+id/wvTermsOfService"
+        android:layout_below="@+id/ivBackTerms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

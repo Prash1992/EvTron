@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlHelpQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+<!--        <-->
+<!--            android:id="@+id/rbslotcheked"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:buttonTint="@color/green"-->
+<!--            android:checked="false" />-->
+
+
+        <TextView
+            android:id="@+id/tvslotList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_toLeftOf="@+id/tvslotBooked"
+            android:textSize="@dimen/sixteen" />
+
+
+        <TextView
+            android:id="@+id/tvslotBooked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Booked"
+            android:layout_centerVertical="true"
+            android:textColor="@color/green"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sixteen" />
+
+    </RelativeLayout>
+
+</LinearLayout>

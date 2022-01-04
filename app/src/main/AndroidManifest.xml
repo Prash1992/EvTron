@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ev.evtron">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.ui.TermsAndConditionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.InstantChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ChargingPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EstimationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BookingConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ui.BottomNavigationActivity"
+            android:label="@string/title_activity_bottom_navigation"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBNnifv9YC4VL6Q8kh-Bk1DzyNzfy0f4LU" />
+
+        <activity
+            android:name=".activities.SlotBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ui.SlotDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EvtronNavigationActivity"
+            android:label="@string/title_activity_evtron_navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PersonalInformationActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name=".activities.SelectSlotActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".activities.FilterActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

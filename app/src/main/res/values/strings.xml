@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">EvTron</string>
+    <string name="next">Next</string>
+    <string name="skip">SKIP</string>
+    <string name="skip_small_cap"><u>Skip!</u></string>
+    <string name="ev_enthusiastic">EV Enthusiastic</string>
+    <string name="ev_owner">EV Owner</string>
+    <string name="slot_confirmed">Slot Booking Confirmed.\nHappy Charging..!</string>
+    <string name="scheduler_time">Scheduler Time</string>
+    <string name="scheduler_date">Scheduler Date</string>
+    <string name="book_slot">Book Slot</string>
+    <string name="booked_slot">Booked Slots</string>
+    <string name="slot_details">Slot Details</string>
+    <string name="slot_booking">Slot Booking</string>
+    <string name="register">REGISTER</string>
+    <string name="save">SAVE</string>
+    <string name="skip_now"><u>Skip Now!</u></string>
+    <string name="start">GOT IT</string>
+    <string name="getting_start">Get Started</string>
+    <string name="resend">Haven\'t received OTP?</string>
+    <string name="personal">Personal Info</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email Id</string>
+    <string name="car_name">Car Name or Model</string>
+    <string name="continue_with">Sign up using</string>
+    <string name="toast_mail_mobile">Please enter your mobile number/email id to login.</string>
+    <string name="agree_terms">Please agree to the EvTron Privacy Policy and Terms Of Use.</string>
+    <string name="rights">\@2021 EvTron, All rights reserved.</string>
+    <string name="agree_to_evtron">By signing up, you are agreeing to our</string>
+    <string name="terms_of_service"><u>Privacy Policy &amp; Terms Of Service</u></string>
+    <string name="continuee">Continue</string>
+    <string name="facebook_app_id">365666454772704</string>
+    <string name="fb_login_protocol_scheme">fb365666454772704</string>
+    <string name="otp">Type Your OTP!</string>
+    <string name="type_otp">Enter the 4 digit OTP sent to</string>
+    <string name="title_activity_evtron_navigation">EvtronNavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_map">Home</string>
+    <string name="menu_car_comparison">Car Comparison</string>
+    <string name="menu_breakdown">Breakdown Assistance</string>
+    <string name="menu_booking">Booking History</string>
+    <string name="menu_about">About</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_faq">FAQs</string>
+    <string name="menu_terms">Terms &amp; Conditions</string>
+    <string name="menu_copyrights">Copyrights</string>
+    <string name="menu_certificates">Certificates</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="favourites">Favourites</string>
+    <string name="charge">Charge</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="explore">Explore</string>
+    <string name="do_you">Do you own an EV?</string>
+    <string name="back"><u>Back</u></string>
+    <string name="cancel"><u>Cancel</u></string>
+    <string name="hold">Hold on! Continue to \nknow more about electric \nvehicles</string>
+    <string name="rs">\u20B9</string>
+
+    <string-array name="rangeSliderValues">
+        <item>20</item>
+        <item>70</item>
+    </string-array>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="angry">&#128522;</string>
+</resources>

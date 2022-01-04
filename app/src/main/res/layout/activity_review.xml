@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ReviewActivity">
+
+    <ImageView
+        android:id="@+id/ivBackReview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_chevron_grey_left_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBackReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Review"
+        android:textSize="28dp"
+        app:layout_constraintLeft_toRightOf="@+id/ivBackReview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/flReview"
+        app:layout_constraintTop_toBottomOf="@id/ivBackReview"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="40dp">
+
+        <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/twenty_four"
+                    android:text="Rate your experience"
+                    android:layout_marginTop="50dp"
+                    />
+
+
+                <LinearLayout
+                    android:layout_below="@+id/tvRate"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rlAngry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tvAngry"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/thirty_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSad"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="56dp">
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tvSad"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/thirty_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlNeutral"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp">
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tvNeutral"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/thirty_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlHappy"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp">
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tvHappy"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/thirty_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlLove"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp">
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tvLove"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/thirty_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:src="@drawable/ic_outline_account_circle_24"/>
+
+    </RelativeLayout>
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toBottomOf="@+id/flReview"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:descendantFocusability="beforeDescendants"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSharethoughts"
+                android:text="Share your valuable \n thoughts"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="@dimen/twenty_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ciImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                android:layout_below="@+id/tvSharethoughts"
+                android:src="@drawable/ic_outline_account_circle_24"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/ciImage"
+                android:layout_below="@+id/tvSharethoughts"
+                android:background="@drawable/message"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:paddingLeft="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etReview"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@null"
+                    android:textSize="12dp"
+                    android:maxLines="3"
+                    android:textColorHint="@color/medium_grey"
+                    android:hint="Lorem ipsum dolor sit amet, \nconsetetur sadipscing elitr,sed."
+                    android:layout_height="wrap_content"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:background="@drawable/round_green_button_square"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_four"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

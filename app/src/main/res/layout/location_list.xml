@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@drawable/round_white_button"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlLocationlist"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="130dp"/>
+
+
+        <TextView
+            android:id="@+id/tvLocationNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:text="Charging Station"
+            android:textColor="#909090"
+            android:textSize="@dimen/sixteen"
+            />
+
+        <TextView
+            android:id="@+id/tvRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_below="@+id/tvLocationNames"
+            android:text="Ratings"
+            android:textColor="#909090"
+            android:textSize="12dp"
+            />
+        <TextView
+            android:id="@+id/tvAvailableslots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_below="@+id/tvRatings"
+            android:text="Open Available Slots: "
+            android:textColor="#909090"
+            android:textSize="12dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/tvLocationNames"
+            android:background="@drawable/round_white_button">
+
+            <ImageView
+                android:id="@+id/ivMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/distance_new" />
+
+            <TextView
+                android:id="@+id/tvKm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:textSize="12dp"
+                android:textColor="@color/green"
+                android:layout_toRightOf="@+id/ivMap"
+                android:text="96.70 kms" />
+
+            <ImageView
+                android:id="@+id/ivPlug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivMap"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/plug_icon" />
+
+            <TextView
+                android:id="@+id/tvPlug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:textSize="12dp"
+                android:textColor="@color/green"
+                android:layout_toRightOf="@+id/ivPlug"
+                android:layout_below="@+id/tvKm"
+                android:text="AC/DC" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnInstant"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="@color/white"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textSize="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/round_green_button_square"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentBottom="true"/>
+
+
+<!--        <Button-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_below="@+id/tvTime"-->
+<!--            android:id="@+id/btnBook"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:text="Book"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:background="@drawable/round_medium_button"/>-->
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

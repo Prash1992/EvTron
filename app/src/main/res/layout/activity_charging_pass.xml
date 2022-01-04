@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.ChargingPassActivity">
+
+    <ImageView
+        android:id="@+id/ivBackBooking"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_baseline_chevron_grey_left_24"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+    <TextView
+        android:id="@+id/tvBookName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivBackBooking"
+        android:text="Charging Pass"
+        android:textSize="@dimen/twenty_four"
+        android:textColor="@color/dark_grey"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/rlChargingPass"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/charging_pass"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvNameCharging"
+            android:text="Hi Prasanth!"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/rlRepeatGrid"
+            android:layout_below="@+id/tvNameCharging"
+            android:background="@drawable/repeat_grid"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvBay"
+                android:text="A1"
+                android:textStyle="bold"
+                android:textSize="32dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/green"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvBayName"
+                android:text="Bay"
+                android:layout_below="@+id/tvBay"
+                android:textSize="@dimen/sixteen"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llDate"
+            android:layout_below="@+id/rlRepeatGrid"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:textSize="@dimen/sixteen"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingEnd="16dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:textSize="@dimen/twenty"
+                android:text="21-Oct-2021"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:gravity="left"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llplug"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llDate"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Plug in"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvPlugin"
+                    android:gravity="center"
+                    android:text="21:30"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Plug out"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvPlugout"
+                    android:gravity="center"
+                    android:text="22:30"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llUnitCharge"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llplug"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Unit charge"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvUnitchargee"
+                    android:gravity="center"
+                    android:text="7KW/hr"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Hourly rate"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvHourlyrate"
+                    android:gravity="center"
+                    android:text="\u20B9150"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBooking"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llUnitCharge"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Booking ID"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvBookingId"
+                    android:gravity="center"
+                    android:text="AsbhsBI"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center"
+                        android:text="Location"
+                        android:textSize="@dimen/sixteen"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_marginStart="8dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/directions"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:gravity="center"
+                    android:text="Cake Bee"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTotal"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llBooking"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Total time"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvTotaltime"
+                    android:gravity="center"
+                    android:text="60 mins"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Total amount"
+                    android:textSize="@dimen/sixteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvTotalamount"
+                    android:gravity="center"
+                    android:text="\u20B9570"
+                    android:textSize="@dimen/twenty"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:background="@drawable/round_green_button_square"
+            android:text="Start"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
